@@ -1,0 +1,4 @@
+src_ip: 192.168.3.108
+device: enp4s0
+src_mac: b0:25:aa:2f:9f:3f
+dst_mac: b0:cc:fe:00:58:c0

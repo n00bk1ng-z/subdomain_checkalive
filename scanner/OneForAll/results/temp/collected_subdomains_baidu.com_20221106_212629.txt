@@ -1,0 +1,3 @@
+dirpool.internal.baidu.com
+email.baidu.com
+sip.baidu.com
