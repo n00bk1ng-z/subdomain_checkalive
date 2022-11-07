@@ -31,7 +31,8 @@ def request2():
     target = baseSearch(request1(sys.argv[1]))
     page = sys.argv[2]
     size = sys.argv[3]
-    data1 = {"api_key": "d6d8129025e619efc374a1f5900ee4e6052fa38f92c3cf00b547a5b2e21ed7f2",
+    api_key = ""
+    data1 = {"api_key": api_key,
              "search": target,
              "page": page,
              "page_size": size,
@@ -65,7 +66,8 @@ def baseSearch(string1):
 
 def request1(string):
     target = baseSearch(string)
-    headers = {"Authorization": "Bearer 3QoML:b62f7674-e679-4d4f-b0f5-5dfc571b76d4"}
+    auth = ""
+    headers = {"Authorization": auth}
     re1 = "https://hunter.qianxin.com/api/search/batch?batch_search=%s&batch_search_type=1&" % (
         target)
     res = requests.get(re1, headers=headers)
