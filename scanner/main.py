@@ -11,10 +11,17 @@ import utils
 import AltDNS
 
 class Scanner:
-    def __init__(self, target):
+    def __init__(self, target=None, file=None):
         self.target = target
+        self.file = file
         self.is_wildcard = None
         self.subdomains = list()
+
+    def runb(self):
+        with open(self.file, 'r') as f:
+            for line in f:
+                self.target = line.strip()
+                self.run()
 
     def run(self):
         self.prepare()
